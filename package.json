@@ -10,13 +10,11 @@
     "format": "prettier --write ."
   },
   "lint-staged": {
-    "client/app/**/*.tsx": "prettier --write",
-    "client/app/**/**/*.tsx": "prettier --write",
-    "client/components/*.tsx": "prettier --write"
+    "*": "prettier --write"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write . && git add -A ."
+      "pre-commit": "lint-staged"
     }
   }
 }
