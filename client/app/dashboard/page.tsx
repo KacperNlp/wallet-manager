@@ -1,11 +1,21 @@
-import AppCard from "@/components/AppCard";
-import AppButton from "@/components/AppButton";
+'use client';
+
+import {
+  VictoryPie,
+  VictoryTheme,
+} from "victory";
 
 export default function Dashboard() {
   return (
     <>
-      <AppCard>Dashboard</AppCard>
-      <AppButton>Wciśnij mnie!</AppButton>
+      <VictoryPie
+          data={[
+            { x: "Cats", y: 35 },
+            { x: "Dogs", y: 40 },
+            { x: "Birds", y: 55 },
+          ]}
+          theme={VictoryTheme.clean}
+        />
     </>
   );
 }
