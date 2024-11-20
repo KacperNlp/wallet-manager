@@ -8,7 +8,7 @@ export default function AppCard({
     children
 }: Props ) {
     return (
-      <section className="p-4 shadow-md">
+      <section className="p-4 shadow-md border border-indigo-700">
         { children }
       </section>
     );
