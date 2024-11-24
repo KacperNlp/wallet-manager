@@ -1,28 +1,14 @@
-'use client';
-import {
-  VictoryPie,
-  VictoryTheme,
-} from "victory";
-import AppTotalBalance from '@/widgets/AppTotalBalance';
+"use client";
+import AppTotalBalance from "@/widgets/AppTotalBalance";
 import AppCard from "@/components/AppCard";
+import AppPie from "@/components/AppPie";
 
 export default function Dashboard() {
   return (
-    <>
-    <AppCard>
-      <AppTotalBalance
-          purpos={100000}
-          currentWalletValue={59000}
-        />
-    </AppCard>
-      <VictoryPie
-          data={[
-            { x: "Cats", y: 35 },
-            { x: "Dogs", y: 40 },
-            { x: "Birds", y: 55 },
-          ]}
-          theme={VictoryTheme.clean}
-        />
-    </>
+    <div className="flex flex-col gap-16 lg:grid lg:grid-cols-2 p-4 lg:p-8">
+      <div>
+        <AppTotalBalance purpos={100000} currentWalletValue={59000} />
+      </div>
+    </div>
   );
 }
