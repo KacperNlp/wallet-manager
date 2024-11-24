@@ -43,7 +43,7 @@ export default function AppTotalBalance({ purpos, currentWalletValue }: Props) {
           {formatNumber(currentWalletValue)}
         </strong>
       </div>
-      <div className="text-xs text-center flex flex-col gap-2 text-gray-300">
+      <div className="text-xs lg:text-sm text-center flex flex-col gap-2 text-gray-300">
         <div>
           Wpłaty netto: <strong>{formatNumber(55000)}</strong>
         </div>

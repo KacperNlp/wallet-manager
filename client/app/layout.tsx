@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${mainFont.className} antialiased h-dvh overflow-hidden`}
+        className={`${mainFont.className} antialiased lg:h-dvh lg:overflow-hidden`}
       >
         {children}
       </body>

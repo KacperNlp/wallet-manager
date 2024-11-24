@@ -13,8 +13,11 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      gridTemplateAreas: {
+        layout: ["bars summary", "history wallet"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@savvywombat/tailwindcss-grid-areas")],
 };
 export default config;
