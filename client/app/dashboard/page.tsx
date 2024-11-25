@@ -25,19 +25,21 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="flex flex-col gap-16 lg:grid lg:grid-areas-layout lg:grid-cols-2 p-4 lg:p-8 max-w-[1440px] mx-auto">
-      <div className="grid-in-summary">
-        <AppTotalBalance purpos={100000} currentWalletValue={59000} />
+    <div className="flex flex-col gap-16 p-4 lg:p-8 max-w-[1440px] mx-auto">
+      <div className="mt-16">
+        <AppCard>
+          <AppTotalBalance purpos={100000} currentWalletValue={59000} />
+        </AppCard>
       </div>
-      <div className="grid-in-wallet">
+      {/* <div className="grid-in-wallet">
         <AppPie pieData={examplePieData} />
       </div>
       <div className="grid-in-bars">
         <AppBar pieData={examplePieData} />
       </div>
-      <div className="grid-in-history">
+      <div>
         <h1>Historia</h1>
-      </div>
+      </div> */}
     </div>
   );
 }
