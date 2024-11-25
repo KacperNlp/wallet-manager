@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { VictoryPie, VictoryTheme } from 'victory';
 import AppActionForm from "./AppActionForm";
 import AppButton from "@/components/AppButton";
 import AppDataWithLabel from "@/components/AppDataWithLabel";
@@ -18,6 +19,18 @@ export default function AppTotalBalance({ purpos, currentWalletValue }: Props) {
     }).format(value);
   };
 
+  const walletCurrencies = [
+    { x: "PLN", y: 33311 },
+    { x: "EUR", y: 27614 },
+    { x: "USD", y: 1250 },
+  ]
+
+  const currenciesList = walletCurrencies.map(({x, y}) => (
+    <div key={x} className="text-sm text-zinc-400">
+      <span>{x}: {formatNumber(y)}</span>
+    </div>
+  ))
+
   return (
     <section>
       <h3 className="text-2xl mb-8">Portfel</h3>
@@ -32,6 +45,14 @@ export default function AppTotalBalance({ purpos, currentWalletValue }: Props) {
         </div>
         <div>
           <h4 className="mb-2 font-light text-zinc-400">Waluty w portfelu</h4>
+          <div>
+            <VictoryPie
+              innerRadius={70}
+              data={walletCurrencies}
+              theme={VictoryTheme.clean}
+            />
+          </div>
+          <div className="flex gap-2">{currenciesList}</div>
         </div>
       </div>
     </section>
