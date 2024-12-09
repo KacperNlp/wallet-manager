@@ -33,7 +33,7 @@ export default function AppTotalBalance({ purpos, currentWalletValue }: Props) {
 
   return (
     <section>
-      <h3 className="text-2xl mb-8">Portfel</h3>
+      <h3 className="text-2xl mb-8">Podsumowanie inwestycji</h3>
       <div className="grid grid-cols-1 md:gird-cols-2 xl:grid-cols-3 gap-12">
         <div className="grid grid-cols-2 gap-8">
           <AppDataWithLabel label="Wpłaty netto" value={formatNumber(59500)} />
