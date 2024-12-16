@@ -1,7 +1,7 @@
 "use client";
 import AppTotalBalance from "@/widgets/AppTotalBalance";
 import AppCard from "@/components/AppCard";
-import AppCreateWalleCard from "@/components/AppCreatWalletCard";
+import AppCreateWalletCard from "@/components/AppCreatWalletCard";
 import AppWalleCard from "@/components/AppWalletCard";
 
 export default function Dashboard() {
@@ -35,15 +35,16 @@ export default function Dashboard() {
 
   return (
     <div className="flex flex-col gap-16 p-4 lg:p-8 max-w-[1440px] mx-auto">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {walletsHtml}
-        <AppCreateWalleCard />
-      </div>
-      <div>
+        <AppCreateWalletCard />
+      </section>
+      <section>
         <AppCard>
           <AppTotalBalance purpos={100000} currentWalletValue={59000} />
         </AppCard>
-      </div>
+      </section>
+      <section></section>
     </div>
   );
 }
